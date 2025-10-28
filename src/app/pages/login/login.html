@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="logo logo-mobile">
+    <i class="fa-solid fa-chart-simple fa-bounce"></i>
+    <h1>Fynch</h1>
+  </div>
+  <div class="card">
+    <aside class="aside-form">
+      <h2 class="title">Entrar</h2>
+      <h3>Entre com suas credenciais</h3>
+      <form [formGroup]="userForm">
+        <div class="input-group">
+          <label class="{{ inputErrorEmail.error || inputLoginInvalid.error ? 'error' : '' }}"
+            >Seu email</label
+          >
+          <input
+            class="{{ inputErrorEmail.error || inputLoginInvalid.error ? 'error' : '' }}"
+            type="email"
+            placeholder="Digite seu email"
+            formControlName="email"
+          />
+          @if (inputErrorEmail.error || inputLoginInvalid.error) {
+          <span class="input-error">{{ inputErrorEmail.message }}</span>
+          }
+        </div>
+        <div class="input-group">
+          <label class="{{ inputErrorPassword.error || inputLoginInvalid.error ? 'error' : '' }}"
+            >Sua senha</label
+          >
+          <input
+            class="{{ inputErrorPassword.error || inputLoginInvalid.error ? 'error' : '' }}"
+            type="password"
+            placeholder="Digite sua senha"
+            formControlName="password"
+          />
+          @if (inputErrorPassword.error || inputLoginInvalid.error) {
+          <span class="input-error">{{
+            inputErrorPassword.message || inputLoginInvalid.message
+          }}</span>
+          }
+          <a class="forgotPassword">Esqueci minha senha</a>
+        </div>
+        <div class="login-options">
+          <app-primary-button (click)="login()" textPrimaryButton="Entrar"></app-primary-button>
+          <a class="login-facebook">
+            <img src="./icons-login/facebook.svg" alt="facebook" title="Entre com o facebook" />
+          </a>
+          <a class="login-google">
+            <img src="./icons-login/google.svg" alt="google" title="Entre com o google" />
+          </a>
+        </div>
+      </form>
+    </aside>
+    <aside class="aside-bg">
+      <img src="bg-login.svg" />
+    </aside>
+  </div>
+  <span class="link-register">Ainda não possui uma conta? <a>Cadastre-se!</a></span>
+</div>
