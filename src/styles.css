@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-primary: #820ad1;
+  --color-muted: #b4b4b4;
+  --color-border: #a9a9a9;
+  --gradient: linear-gradient(45deg, #7386d8, #820ad1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Euclid Circular B', 'Poppins';
+}
+
+body {
+  background: url(../public//background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Faz a imagem ocupar toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button,
+input {
+  font-size: 16px;
+}
